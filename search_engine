@@ -19,3 +19,8 @@ def save_last_search():
     global searched_words
     global search
     return searched_words.insert(0,search)
+
+def print_last_search():
+    global searched_words
+    for num in searched_words:
+    print("Your last search(s):", num)
