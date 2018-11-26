@@ -1,4 +1,16 @@
 words = ['Mama', 'Papa', 'Hermana', 'Hermano']
 searched_words = []
 search = ""
-search_counter = 0 
+search_counter = 0
+
+def search_engine():
+    global search
+    global search_counter
+    print("Hi! What must I search?")
+    search = input().capitalize()
+    while not search in words:
+        print("This concept is not in our list. Please send a mail to: ..............")
+        search = input().capitalize()
+    print('Mama is a mother')
+    search_counter = search_counter  + 1
+    return search_counter
