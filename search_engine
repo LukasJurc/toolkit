@@ -1,0 +1,46 @@
+words = ['Mama', 'Papa', 'Hermana', 'Hermano']
+searched_words = []
+search = ""
+search_counter = 0
+
+def search_engine():
+    global search
+    global search_counter
+    print("Hi! What must I search?")
+    search = input().capitalize()
+    while not search in words:
+        print("This concept is not in our list. Please send a mail to: ..............")
+        search = input().capitalize()
+    print('Mama is a mother')
+    search_counter = search_counter  + 1
+    return search_counter
+
+def save_last_search():
+    global searched_words
+    global search
+    return searched_words.insert(0,search)
+
+def print_last_search():
+    global searched_words
+    for num in searched_words:
+    print("Your last search(s):", num)
+
+def research():
+    print("Do you will make another search? (Yes or No)")
+    new_start = input().capitalize()
+    answer = ['Yes', 'No']
+    while  new_start not in answer:
+        print("Houston! We have a problem, please answer for  'Yes or No' to solve it")
+        new_start = input().capitalize()
+    if new_start == "No":
+    print("See us!")
+    while new_start == "Yes":
+        start_search()
+        print("Do you will make another search?")
+        new_start = input().capitalize()
+
+def  re_start_search():
+    search_engine()
+    save_last_search()
+    print_last_search()
+    research()
