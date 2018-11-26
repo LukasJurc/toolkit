@@ -38,3 +38,9 @@ def research():
         start_search()
         print("Do you will make another search?")
         new_start = input().capitalize()
+
+def  re_start_search():
+    search_engine()
+    save_last_search()
+    print_last_search()
+    research()
