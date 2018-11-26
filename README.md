@@ -1,1 +1,1 @@
-# Contributors : LucasJurc, m2dan, Black00Z, (Dinko)
+# Contributors : LucasJurc, m2dan, Black00Z, samuraicodes
