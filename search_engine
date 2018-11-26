@@ -14,3 +14,8 @@ def search_engine():
     print('Mama is a mother')
     search_counter = search_counter  + 1
     return search_counter
+
+def save_last_search():
+    global searched_words
+    global search
+    return searched_words.insert(0,search)
