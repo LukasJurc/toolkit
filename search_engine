@@ -24,3 +24,17 @@ def print_last_search():
     global searched_words
     for num in searched_words:
     print("Your last search(s):", num)
+
+def research():
+    print("Do you will make another search? (Yes or No)")
+    new_start = input().capitalize()
+    answer = ['Yes', 'No']
+    while  new_start not in answer:
+        print("Houston! We have a problem, please answer for  'Yes or No' to solve it")
+        new_start = input().capitalize()
+    if new_start == "No":
+    print("See us!")
+    while new_start == "Yes":
+        start_search()
+        print("Do you will make another search?")
+        new_start = input().capitalize()
