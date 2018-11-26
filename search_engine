@@ -1,0 +1,4 @@
+words = ['Mama', 'Papa', 'Hermana', 'Hermano']
+searched_words = []
+search = ""
+search_counter = 0 
