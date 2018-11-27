@@ -33,11 +33,10 @@ def research():
         print("Houston! We have a problem, please answer for  'Yes or No' to solve it")
         new_start = input().capitalize()
     if new_start == "No":
-    print("See us!")
-    while new_start == "Yes":
-        start_search()
-        print("Do you will make another search?")
-        new_start = input().capitalize()
+            print("See us!") 
+            new_start = "No"
+    elif new_start == "Yes":
+            re_start_search() 
 
 def  re_start_search():
     search_engine()
