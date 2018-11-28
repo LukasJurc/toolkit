@@ -28,3 +28,9 @@ def search_engine():
                 if question == "no":
                     start = False
                     print("Bye Bye")
+
+def introduce_other_concept():
+    global search
+    print("Introduce another word!:")
+    search = input()
+    search_engine()
