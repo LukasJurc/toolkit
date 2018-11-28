@@ -29,10 +29,10 @@ def create_window1():
             self.output = tk.Label(self, text="")
 
         # lay the widgets out on the screen. 
-            self.prompt.pack(side="top", fill="x")
-            self.entry.pack(side="top", fill="x", padx=20)
-            self.output.pack(side="top", fill="x", expand=True)
-            self.submit.pack(side="right")
+            self.prompt.place(x=20, y=10, width=100, height=30)
+            self.entry.place(x=125, y=10, width=550, height=30)
+            self.output.place(x=20, y=60, width=760, height=520)
+            self.submit.place(x=680, y=10, width=100, height=30)
 
         def calculate(self):
         # get the value from the input widget, convert
