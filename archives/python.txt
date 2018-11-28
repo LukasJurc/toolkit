@@ -1,0 +1,16 @@
+Was ist Python? 
+
+Python (['pa??n?], ['pa???n], auf Deutsch auch ['py?t?n]) ist eine universelle, 
+üblicherweise interpretierte höhere Programmiersprache.[2] Sie hat den Anspruch, 
+einen gut lesbaren, knappen Programmierstil zu fördern.[3] So werden beispielsweise 
+Blöcke nicht durch geschweifte Klammern, sondern durch Einrückungen strukturiert. 
+Wegen seiner klaren und übersichtlichen Syntax gilt Python als einfach zu erlernen. 
+
+Mehr über Python lesen? 
+
+https://de.wikipedia.org/wiki/Python_(Programmiersprache)
+https://www.python.org
+
+Videos können auch hilfen: 
+
+
