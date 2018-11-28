@@ -49,3 +49,8 @@ def research():
         print("Good bye!")
     else:
         research()
+
+
+print("What search?")
+search = input()
+search_engine()
