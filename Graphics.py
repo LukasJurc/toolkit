@@ -21,18 +21,34 @@ def create_window1():
             root.title("GPB Search")
             root.option_add("*background", "lightgrey")
 
+#Entry 1, Window 2
+        
         # create a prompt, an input box, an output label,
         # and a button to do the computation
-            self.prompt = tk.Label(self, text="Search for a word:", anchor="w")
-            self.entry = tk.Entry(self)
-            self.submit = tk.Button(self, text="Submit", command = self.calculate)
-            self.output = tk.Label(self, text="")
+                self.prompt = tk.Label(self, text="Your Course:", anchor="w")
+                self.entry = tk.Entry(self)
+                self.submit = tk.Button(self, text="Submit", command = self.calculate)
+                self.output = tk.Label(self, text="")
+                
 
         # lay the widgets out on the screen. 
-            self.prompt.pack(side="top", fill="x")
-            self.entry.pack(side="top", fill="x", padx=20)
-            self.output.pack(side="top", fill="x", expand=True)
-            self.submit.pack(side="right")
+                self.prompt.place(x=30, y=0, width=300, height=50)
+                self.entry.place(x=30, y=60, width=300, height=50)
+                self.submit.place(x=30, y=120, width=300, height=50)
+                self.output.place(x=30, y=180, width=300, height=50)
+                
+
+#Entry 2, Window 2
+                self.prompt = tk.Label(self, text="Your Grade:", anchor="w")
+                self.entry = tk.Entry(self)
+                self.submit = tk.Button(self, text="Submit", command = self.calculate)
+                self.output = tk.Label(self, text="")
+
+        # lay the widgets out on the screen. 
+                self.prompt.place(x=400, y=0, width=300, height=50)
+                self.entry.place(x=400, y=60, width=300, height=50)
+                self.submit.place(x=400, y=120, width=300, height=50)
+                self.output.place(x=400, y=180, width=300, height=50)
 
         def calculate(self):
         # get the value from the input widget, convert
