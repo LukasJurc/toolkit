@@ -1,1 +1,2 @@
-
+answerList = ["Yes","No"]
+question = ""
