@@ -8,7 +8,7 @@ root.resizable(0,0)
 root.title("GPB Toolkit")
 root.option_add("*background", "lightgrey")
 
-    
+# Window 1 = Search Engine    
 # function opens a new window
 def create_window1():
     
@@ -55,6 +55,7 @@ def create_window1():
         Example(root).pack(fill="both", expand=True)
     
 
+#Window 2 = Program who calculate average of notes
 def create_window2():
     
     class Example(tk.Frame):
@@ -115,10 +116,12 @@ def create_window2():
     
 
 
-   
+#Window 3 = Program to write notes
 def create_window3():
     window3 = tk.Toplevel(root)
-    
+
+
+#Window 4 = Info about the program
 def create_window4():
     window4 = tk.Toplevel(root)
     
