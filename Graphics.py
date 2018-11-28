@@ -117,8 +117,48 @@ def create_window2():
 
 
 #Window 3 = Program to write notes
+
 def create_window3():
-    window3 = tk.Toplevel(root)
+    
+    class Example(tk.Frame):
+        def __init__(self, parent):
+            tk.Frame.__init__(self, parent)
+            frame.pack()
+            root.geometry("800x600")
+            root.resizable(0,0)
+            root.title("GPB Search")
+            root.option_add("*background", "lightgrey")
+            
+            self.submit = tk.Button(self, text="Erstellen", command = self.calculate)
+            self.submit = tk.Button(self, text="Suchen", command = self.calculate)
+            self.submit.place(x=680, y=10, width=100, height=30)
+            self.submit.place(x=680, y=10, width=100, height=30)
+
+        # create a prompt, an input box, an output label,
+        # and a button to do the computation
+            self.prompt = tk.Label(self, text="Search for a word:", anchor="w")
+            self.entry = tk.Entry(self)
+            self.submit = tk.Button(self, text="Submit", command = self.calculate)
+            self.output = tk.Label(self, text="")
+
+        # lay the widgets out on the screen. 
+            self.prompt.place(x=20, y=10, width=100, height=30)
+            self.entry.place(x=125, y=10, width=550, height=30)
+            self.output.place(x=20, y=60, width=760, height=520)
+            self.submit.place(x=680, y=10, width=100, height=30)
+
+        def calculate(self):
+        # get the value from the input widget, convert
+        # it to an int, and do a calculation
+            try:
+                i = int(self.entry.get())
+                result = "%s*2=%s" % (i, i*2)
+            except ValueError:
+                result = "Please enter digits only"
+
+        # set the output widget to have our result
+            self.output.configure(text=result)
+
 
 
 #Window 4 = Info about the program
