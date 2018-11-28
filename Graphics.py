@@ -3,6 +3,11 @@ import tkinter as tk
 root = tk.Tk()
 frame = tk.Frame(root)
 frame.pack()
+root.geometry("363x200")
+root.resizable(0,0)
+root.title("GPB Toolkit")
+root.option_add("*background", "lightgrey")
+
     
 # function opens a new window
 def create_window1():
@@ -10,6 +15,11 @@ def create_window1():
     class Example(tk.Frame):
         def __init__(self, parent):
             tk.Frame.__init__(self, parent)
+            frame.pack()
+            root.geometry("800x600")
+            root.resizable(0,0)
+            root.title("GPB Search")
+            root.option_add("*background", "lightgrey")
 
         # create a prompt, an input box, an output label,
         # and a button to do the computation
@@ -50,6 +60,10 @@ def create_window2():
     class Example(tk.Frame):
             def __init__(self, parent):
                 tk.Frame.__init__(self, parent)
+                root.geometry("800x600")
+                root.resizable(0,0)
+                root.title("GPB Grades")
+                root.option_add("*background", "lightgrey")
 
         # create a prompt, an input box, an output label,
         # and a button to do the computation
@@ -57,11 +71,12 @@ def create_window2():
                 self.entry = tk.Entry(self)
                 self.submit = tk.Button(self, text="Submit", command = self.calculate)
                 self.output = tk.Label(self, text="")
+                
 
         # lay the widgets out on the screen. 
                 self.prompt.pack(side="top", fill="x")
-                self.entry.pack(side="top", fill="x", padx=20)
-                self.output.pack(side="top", fill="x", expand=True)
+                self.entry.pack(side="top", fill="x", padx=20, pady = 30)
+                self.output.pack(side="top", fill="x", expand=False)
                 self.submit.pack(side="right")
                 
                 self.prompt = tk.Label(self, text="Your Grade:", anchor="w")
@@ -71,8 +86,8 @@ def create_window2():
 
         # lay the widgets out on the screen. 
                 self.prompt.pack(side="top", fill="x")
-                self.entry.pack(side="top", fill="x", padx=20)
-                self.output.pack(side="top", fill="x", expand=True)
+                self.entry.pack(side="top", fill="x", padx=20, pady = 30)
+                self.output.pack(side="top", fill="x", expand=False)
                 self.submit.pack(side="right")
 
             def calculate(self):
