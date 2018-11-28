@@ -3,7 +3,7 @@ import tkinter as tk
 root = tk.Tk()
 frame = tk.Frame(root)
 frame.pack()
-root.geometry("363x200")
+
 root.resizable(0,0)
 root.title("GPB Toolkit")
 root.option_add("*background", "lightgrey")
