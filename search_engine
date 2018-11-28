@@ -1,2 +1,30 @@
 answerList = ["Yes","No"]
 question = ""
+
+def search_engine():
+    global search
+    try: 
+        text = search +'.txt'
+        archive= open("./archives/" + text)
+        print(archive.read())
+        archive.close()
+        research()
+    except:
+        print("The concept is not in our list")
+        print("Do you will search another concept? Write 'yes' or 'no'")
+        question = input().capitalize()
+        if question == "Yes":
+            introduce_other_concept()
+        elif question == "No":
+            print("Bye Bye")
+        else:
+            start = True
+            while start:
+                print("Please only 'yes' or 'no'")
+                question = input()
+                if question == "yes":
+                    start = False
+                    introduce_other_concept()
+                if question == "no":
+                    start = False
+                    print("Bye Bye")
