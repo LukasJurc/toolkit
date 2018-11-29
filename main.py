@@ -1,5 +1,5 @@
 import tkinter as tk
-import blubb as bb
+import input_new as bb
 
 def window_one():
     
