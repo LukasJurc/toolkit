@@ -1,12 +1,13 @@
 import tkinter as tk
 import input_new as bb
-
+import search_engine as se
     
-def press_button_one():    window_one()
+def press_button_one():    
+    se.window_one()
 
 
 def press_button_two():
-    window_one()
+    xxxxxxxxxx
 
 
 def press_button_three():
@@ -14,7 +15,7 @@ def press_button_three():
 
 
 def press_button_four():
-    window_one()
+    xxxxxxxxxxxxxxxx
     
 
 main = tk.Tk()
