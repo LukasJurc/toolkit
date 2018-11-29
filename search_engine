@@ -1,2 +1,6 @@
 from tkinter import *
 import random
+
+
+def window_one():
+    list_fail = ["Please again", "Ups, problems", "Houston, we have a problem", "Send us a mail to:xxxxxxx@xxxxx.com"]
