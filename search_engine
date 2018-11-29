@@ -4,3 +4,13 @@ import random
 
 def window_one():
     list_fail = ["Please again", "Ups, problems", "Houston, we have a problem", "Send us a mail to:xxxxxxx@xxxxx.com"]
+
+    def search(word):
+        txt = open("./archives/python.txt")
+        try:
+            for info in txt:
+                output = info.split(";")
+                if word.capitalize() == output[1]:
+                    return output
+        except:
+            return "No"
