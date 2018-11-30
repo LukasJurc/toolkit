@@ -1,13 +1,14 @@
 import tkinter as tk
 import input_new as bb
 import search_engine as se
+import durchschnittsberechnung_neu as avg
     
 def press_button_one():    
     se.window_one()
 
 
 def press_button_two():
-    xxxxxxxxxx
+    avg.window_two()
 
 
 def press_button_three():
