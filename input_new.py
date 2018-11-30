@@ -2,6 +2,7 @@
 from tkinter import *
 #Automated Date input
 import datetime
+import os
 
 def window_three():
     today = datetime.date.today()  
@@ -10,6 +11,8 @@ def window_three():
         mtext = mEntry.get()
         mlabel2 = Label(mGui, text=str(today)+": " + mtext)
         mlabel2.pack()
+        #Creates the note folder, no error message, if directory already exists
+        os.makedirs("./note/", exist_ok=True)
         # Definition of filename and write path
         fileinput = open("./note/"+ str(today) +".txt", 'w')#
         fileinput.write(mtext)
