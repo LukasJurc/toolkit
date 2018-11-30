@@ -1,11 +1,13 @@
 
 from tkinter import *
 #Automated Date input
-import datetime
+from datetime import date
+from datetime import datetime
 import os
 
 def window_three():
-    today = datetime.date.today()  
+    #time showing date and time
+    today = datetime.now().strftime("%d-%m-%Y um %H %M %S Uhr") 
 
     def mhello():
         mtext = mEntry.get()
