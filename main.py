@@ -29,11 +29,11 @@ button_one = tk.Button(main, text="Suchen", command = press_button_one)
 button_one.place(x=20, y=25, width=80, height=30)
 
 
-button_two = tk.Button(main, text="Notizen", command = press_button_two)
+button_two = tk.Button(main, text="Durchschnitt", command = press_button_two)
 button_two.place(x=110, y=25, width=80, height=30)
 
 
-button_three = tk.Button(main, text="Durschnitt", command = press_button_three)
+button_three = tk.Button(main, text="Notizen", command = press_button_three)
 button_three.place(x=200, y=25, width=80, height=30)
 
 
