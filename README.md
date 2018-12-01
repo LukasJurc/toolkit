@@ -1,4 +1,4 @@
-# "toolkit" - pronounced : 'ˈtuːlkɪt'
+# "toolkit" - pronounced: 'ˈtuːlkɪt'
 
 toolkit is a small help for students including a GPA calculator and a small dictionary for (beginners) in programming, everything on a GUI.
 
@@ -13,5 +13,5 @@ Binded to a search we included a small dictionary including some basic functions
 ### > GUI
 Everything written in Python
 
-## Contributors :
+## Contributors:
   ```@LucasJurc, @m2dan, @Black00Z, @samuraicodes, @StephanOn```
