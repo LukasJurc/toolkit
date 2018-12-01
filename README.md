@@ -11,7 +11,9 @@ Aimed for students living in Germany as the Student Point System might (probably
 Binded to a search we included a small dictionary including some basic functions. It might be more useful for beginners but no one's gonna stop an expert from using it :smile:
 
 ### > GUI
-Everything written in Python
+A simple GUI to make it easier for the user to type the data in
 
+
+Everything written in Python
 ## Contributors:
   ```@LucasJurc, @m2dan, @Black00Z, @samuraicodes, @StephanOn```
