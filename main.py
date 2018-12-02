@@ -2,6 +2,7 @@ import tkinter as tk
 import input_new as bb
 import search_engine as se
 import gpa_calculator as avg
+import dokumentation as do
     
 def press_button_one():    
     se.window_one()
@@ -16,7 +17,7 @@ def press_button_three():
 
 
 def press_button_four():
-    xxxxxxxxxxxxxxxx
+    do.window_four()
     
 
 main = tk.Tk()
