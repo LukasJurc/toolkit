@@ -3,7 +3,8 @@ import webbrowser
 import notes as n
 import links_library as ll
 import gpa_calculator as avg
-    
+
+#Functions to call the modules
 def press_button_one():    
     ll.window_one()
 
@@ -15,16 +16,16 @@ def press_button_two():
 def press_button_three():
     n.window_three()
 
-
+#Link to repository
 def press_button_four():
     webbrowser.open(r'https://github.com/LukasJurc/toolkit')
     
-
+# Creation of the user interface
 main = tk.Tk()
 main.geometry("400x60")
 main.resizable(0,0)
 main.title("GPB Tools")
-main_label = tk.Label(main, text="Choose your programm")
+main_label = tk.Label(main, text="Wählen Sie Ihr Programm")
 main_label.pack()
 
 button_one = tk.Button(main, text="Linkbibliothek", command = press_button_one)

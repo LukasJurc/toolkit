@@ -1,7 +1,6 @@
 
 from tkinter import *
 #Automated Date input
-from datetime import date
 from datetime import datetime
 import os
 
@@ -9,33 +8,30 @@ def window_three():
     #time showing date and time
     today = datetime.now().strftime("%d-%m-%Y um %H %M %S Uhr") 
 
-    def mhello():
-        mtext = mEntry.get()
-        mlabel2 = Label(mGui, text=str(today)+": " + mtext)
-        mlabel2.pack()
+    def start_notes():
+        text_notes = input_notes.get()
+        label_text = Label(main_notes, text=str(today)+": " + text_notes)
+        label_text.pack()
         #Creates the note folder, no error message, if directory already exists
         os.makedirs("./note/", exist_ok=True)
         # Definition of filename and write path
         fileinput = open("./note/"+ str(today) +".txt", 'w')#
-        fileinput.write(mtext)
+        fileinput.write(text_notes)
         # Closes file
         fileinput.close()
         
     
-    mGui = Tk()
+    main_notes = Tk()
 
-    mGui.geometry('450x500')
-    mGui.title('Notizen')
+    main_notes.geometry('450x500')
+    main_notes.title('Notizen')
     #note label
-    mlabel = Label(mGui, text='Geben Sie Ihre Notizen ein:')
-    mlabel.pack()
-    mbutton = Button(mGui, text ='OK',command=mhello,fg="black",bg="light grey")
+    label_notes = Label(main_notes, text='Geben Sie Ihre Notizen ein:')
+    label_notes.pack()
+    mbutton = Button(main_notes, text ='OK',command=start_notes,fg="black",bg="light grey")
     mbutton.pack()
 
-    mEntry = Entry(mGui)
-    mEntry.pack()
+    input_notes = Entry(main_notes)
+    input_notes.pack()
 
-    mGui.mainloop()
-
-
-
+    main_notes.mainloop()
