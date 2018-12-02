@@ -1,4 +1,5 @@
 import tkinter as tk
+import webbrowser
 import notes as n
 import links_library as ll
 import gpa_calculator as avg
@@ -17,7 +18,7 @@ def press_button_three():
 
 
 def press_button_four():
-    do.window_four()
+    webbrowser.open(r'https://github.com/LukasJurc/toolkit')
     
 
 main = tk.Tk()
