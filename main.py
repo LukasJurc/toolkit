@@ -2,7 +2,7 @@ import tkinter as tk
 import notes as n
 import links_library as ll
 import gpa_calculator as avg
-import dokumentation as do
+import documentation as do
     
 def press_button_one():    
     ll.window_one()
