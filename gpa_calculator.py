@@ -1,122 +1,176 @@
-# Start of the function
+from tkinter import *
+import table as t
 
-
-def input_subjects():
-    global number_answer
-    counter = 3
-    counter2 = 10
-    print("Wie viele Fächer wollen sie eintragen?: ")
-    number_answer = input()
-    while int(counter)> int(number_answer) or int(counter2)< int(number_answer):
-        print("""Der Durchschnitt kann nur mit mindestens 3 Fächern berechnet werden.
-          Bitte geben sie eine Zahl zwischen 3-10 ein.""")
-        number_answer = input()
+def window_two():
     
-    print("OK, wir machen weiter.")
-    points()
-
-# calculating points
-def points():
-    global list_subjects
-    global list_points
-    start0 = 0
-    while start0 < int(number_answer):
-        ssubjects = input("Geben sie ein Fach ein: ")
-        list_subjects.insert(0,ssubjects)
-        spoints = input("Geben sie ihre Punktzahl ein: ")
-        list_points.insert(0,int(spoints))
-        if int(spoints)>= 92 and int(spoints)<= 100:
-            print("Note: sehr gut =", A)
-            list_marks.insert(0, 1)
-        elif int(spoints)>= 81 and int(spoints)<= 91:
-            print("Note: gut =", B)
-            list_marks.insert(0, 2)
-        elif int(spoints)>= 67 and int(spoints)<= 80:
-            print("Note: befriedigend =", C)
-            list_marks.insert(0, 3)
-        elif int(spoints)>= 50 and int(spoints)<= 66:
-            print("Note: ausreichend =", D)
-            list_marks.insert(0, 4)
-        elif int(spoints)>= 30 and int(spoints)<= 49:
-            print("Note: mangelhaft =", E)
-            list_marks.insert(0, 5)
-        elif int(spoints)>= 0 and int(spoints)<= 29:
-            print("Note: ungenügend =", F)
-            list_marks.insert(0, 6)
-        start0 = start0 +1
-             
-    gpa()
+    def input_subjects(event):
+        fächer = input_amount.get()
+        list_points = fächer.split()
+        if len(list_points) < 3 or len(list_points) > 10:
+            error_message.config(text ="3 bis 10! Nochmal eingeben")
+        else:
+            return gpa(list_points)
 
 
-# Grade Point Average = GPA / gpa
-def gpa():
-    global list_subjects
-    global list_points
-    if len(list_points) == 3:
-        x1 = (list_points[0] + list_points[1] + list_points[2])/3
-        print("Punktedurchschnitt:", round(x1,2))
-    elif len(list_points) == 4:
-        x2 = (list_points[0] + list_points[1] + list_points[2] + list_points[3])/4
-        print("Durchschnittspunkte:", round(x2,2))
-    elif len(list_points) == 5:
-        x3 = (list_points[0] + list_points[1] + list_points[2] + list_points[3] + list_points[4])/5
-        print("Durchschnittspunkte:", round(x3,2))
-    elif len(list_points) == 6:
-        x4 = (list_points[0] + list_points[1] + list_points[2] + list_points[3] + list_points[4] + list_points[5])/6
-        print("Durchschnittspunkte:", round(x4,2))
-    elif len(list_points) == 7:
-        x5 = (list_points[0] + list_points[1] + list_points[2] + list_points[3] + list_points[4] + list_points[5] + list_points[6])/7
-        print("Durchschnittspunkte:", round(x5,2))
-    elif len(list_points) == 8:
-        x6 = (list_points[0] + list_points[1] + list_points[2] + list_points[3] + list_points[4] + list_points[5] + list_points[6] + list_points[7])/8
-        print("Durchschnittspunkte:", round(x6,2))
-    elif len(list_points) == 9:
-        x7 = (list_points[0] + list_points[1] + list_points[2] + list_points[3] + list_points[4] + list_points[5] + list_points[6] + list_points[7] + list_points[8])/9
-        print("Durchschnittspunkte:", round(x7,2))
-    elif len(list_points) == 10:
-        x8 = (list_points[0] + list_points[1] + list_points[2] + list_points[3] + list_points[4] + list_points[5] + list_points[6] + list_points[7] + list_points[8] + list_points[9])/10
-        print("Durchschnittspunkte:", round(x8,2))
+    def gpa(list_points):
+        try:
+            points =[]
+            for num in list_points:
+                points.insert(0,int(num)) 
+            if len(points) == 3:      
+                points_one = (points[0] + points[1] + points[2])/3
+                if points_one < 100:
+                    points_answer.config(text = round(points_one,2))
+                else:
+                    points_answer.config(text = "Error.")
+            elif len(points) == 4:
+                points_two = (points[0] + points[1] + points[2] + points[3])/4
+                if points_two < 100:
+                    points_answer.config(text = round(points_two,2))
+                else:
+                    points_answer.config(text = "Error.")
+            elif len(points) == 5:
+                points_three = (points[0] + points[1] + points[2] + points[3] + points[4])/5
+                if points_three < 100:
+                    points_answer.config(text = round(points_three,2))
+                else:
+                    points_answer.config(text = "Error.")
+            elif len(points) == 6:
+                points_four = (points[0] + points[1] + points[2] + points[3] + points[4]
+                               + points[5])/6
+                if points_four < 100:
+                    points_answer.config(text = round(points_four,2))
+                else:
+                    points_answer.config(text = "Error.")
+            elif len(points) == 7:
+                points_five = (points[0] + points[1] + points[2] + points[3] + points[4]
+                               + points[5] + points[6])/7
+                if points_five < 100:
+                    points_answer.config(text = round(points_five,2))
+                else:
+                    points_answer.config(text = "Error.")
+            elif len(points) == 8:
+                points_six = (points[0] + points[1] + points[2] + points[3] + points[4]
+                              + points[5] + points[6] + points[7])/8
+                if points_six < 100:
+                    points_answer.config(text = round(points_six,2))
+                else:
+                    points_answer.config(text = "Error.")
+            elif len(points) == 9:
+                points_seven = (points[0] + points[1] + points[2] + points[3] + points[4]
+                                + points[5] + points[6] + points[7] + points[8])/9
+                if points_seven < 100:
+                    points_answer.config(text = round(points_seven,2))
+                else:
+                    points_answer.config(text = "Error.")
+            elif len(points) == 10:
+                points_eight = (points[0] + points[1] + points[2] + points[3] + points[4]
+                                + points[5] + points[6] + points[7] + points[8] + points[9])/10
+                if points_eight < 100:
+                    points_answer.config(text = round(points_eight,2))
+                else:
+                    points_answer.config(text = "Error.")     
+            return prueba(points)
+        except:
+            error_message.config(text ="Nur nummern, bitte.")
 
-    gpamarks()
+    def prueba(points):
+        marks = []
+        for spoints in points:
+            if spoints > 100:
+                error_message.config(text ="Punkten unter 100")
+                break
+            elif spoints>= 92 and spoints<= 100:
+                marks.insert(0, 1)
+            elif spoints >= 81 and spoints<= 91:
+                marks.insert(0, 2)
+            elif spoints >= 67 and spoints<= 80:
+                marks.insert(0, 3)
+            elif spoints >= 50 and spoints<= 66:
+                marks.insert(0, 4)
+            elif spoints>= 30 and spoints<= 49:
+                marks.insert(0, 5)
+            elif spoints >= 0 and spoints<= 29:
+                marks.insert(0, 6)
+        if len(marks) == len(points):
+            return gpamarks(marks)
+    
+    def gpamarks(marks):
+        if len(marks) == 3:
+            mark_one = (marks[0] + marks[1] + marks[2])/3
+            marks_answer.config(text = round(mark_one,2))
+        elif len(marks) == 4:
+            mark_two = (marks[0] + marks[1] + marks[2] + marks[3])/4
+            marks_answer.config(text = round(mark_two,2))
+        elif len(marks) == 5:
+            mark_three = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4])/5
+            marks_answer.config(text = round(mark_three,2))
+        elif len(marks) == 6:
+            mark_four = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]
+                         + marks[5])/6
+            marks_answer.config(text = round(mark_four,2))
+        elif len(marks) == 7:
+            mark_five = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]
+                         + marks[5] + marks[6])/7
+            marks_answer.config(text = round(mark_five,2))        
+        elif len(marks) == 8:
+            mark_six = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]
+                        + marks[5] + marks[6] + marks[7])/8
+            marks_answer.config(text = round(mark_six,2))
+        
+        elif len(marks) == 9:
+            mark_seven = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]
+                          + marks[5] + marks[6] + marks[7] + marks[8])/9
+            marks_answer.config(text = round(mark_seven,2))
+        
+        elif len(marks) == 10:
+            mark_eight = (marks[0] + marks[1] + marks[2] + marks[3] + marks[4]
+                          + marks[5] + marks[6] + marks[7] + marks[8] + marks[9])/10
+            marks_answer.config(text = round(mark_eight,2))
+    
+    def reset():
+        error_message.config(text = "Punktanzahl mit leertaste trennen.")
+        points_answer.config(text = "")
+        marks_answer.config(text = "")
+        input_amount.config(text = "")
+    
+    def table_call():
+        t.point_system()
+  
+    window =  Tk()
+    window.geometry("540x120")
+    
+    frame_one =  Frame(window)
+    frame_one.place(x=20, y=0, width=550, height=50)
 
-# GPA / gpa marks
-def gpamarks():
-    global list_marks
-    if len(list_marks) == 3:
-        y1 = (list_marks[0] + list_marks[1] + list_marks[2])/3
-        print("Notendurchschnitt:", round(y1,2))
-    elif len(list_marks) == 4:
-        y2 = (list_marks[0] + list_marks[1] + list_marks[2] + list_marks[3])/4
-        print("Notendurchschnitt:", round(y2,2))
-    elif len(list_marks) == 5:
-        y3 = (list_marks[0] + list_marks[1] + list_marks[2] + list_marks[3] + list_marks[4])/5
-        print("Notendurchschnitt:", round(y3,2))
-    elif len(list_marks) == 6:
-        y4 = (list_marks[0] + list_marks[1] + list_marks[2] + list_marks[3] + list_marks[4] + list_marks[5])/6
-        print("Notendurchschnitt:", round(y4,2))
+    label_amount = Label(frame_one, text= "Punkte eingeben: ")
+    label_amount.place(x=-20, y=5, width=150, height=30)
 
+    input_amount = Entry(frame_one)
+    input_amount.bind("<Return>",input_subjects)
+    input_amount.place(x=120, y=5, width= 170, height=30)
+    
+    error_message = Label(frame_one, text = "Punktanzahl mit leertaste trennen.")
+    error_message.place(x=300, y=5, width=200, height=30)
+    
+    frame_two =  Frame(window)
+    frame_two.place(x=0, y=40, width=550, height=150)
 
+    points_label = Label(frame_two, text ="Punktendurschnitt:")
+    points_label.place(x=-47, y=0, width=250, height=30)
+    
+    points_answer = Label(frame_two)
+    points_answer.place(x=137, y=0, width=50, height=30)
+    
+    marks_label = Label(frame_two, text ="Notendurschnitt:")
+    marks_label.place(x=-53, y=30, width=250, height=30)
+    
+    marks_answer = Label(frame_two)
+    marks_answer.place(x=137, y=30, width=50, height=30)
+    
+    button_one = Button(frame_two, text="Punkt Tabelle", command = table_call)
+    button_one.place(x=310, y=25, width=100, height=30)
+    
+    button_one = Button(frame_two, text="zurrückstellen", command = reset)
+    button_one.place(x=420, y=25, width=100, height=30)
 
-list_subjects = []
-list_points = []
-list_marks = []
-
-
-marks =  {
-  "excellent": 1,
-  "good": 2,
-  "okay": 3,
-  "well": 4,
-  "acceptable": 5,
-  "bad": 6
-}
-
-A = marks.get("excellent")
-B = marks.get("good")
-C = marks.get("okay")
-D = marks.get("well")
-E = marks.get("acceptable")
-F = marks.get("bad")
-
-
-input_subjects()
