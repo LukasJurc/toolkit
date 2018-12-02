@@ -34,5 +34,3 @@ def window_four():
     mEntry.pack()
 
     mGui.mainloop()
-
-window_four()
