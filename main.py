@@ -1,5 +1,5 @@
 import tkinter as tk
-import input_new as bb
+import notes as n
 import links_library as ll
 import gpa_calculator as avg
 import dokumentation as do
@@ -13,7 +13,7 @@ def press_button_two():
 
 
 def press_button_three():
-    bb.window_three()
+    n.window_three()
 
 
 def press_button_four():
