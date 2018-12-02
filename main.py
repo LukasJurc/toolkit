@@ -1,11 +1,11 @@
 import tkinter as tk
 import input_new as bb
-import search_engine as se
+import links_library as ll
 import gpa_calculator as avg
 import dokumentation as do
     
 def press_button_one():    
-    se.window_one()
+    ll.window_one()
 
 
 def press_button_two():
@@ -27,7 +27,7 @@ main.title("GPB Tools")
 main_label = tk.Label(main, text="Choose your programm")
 main_label.pack()
 
-button_one = tk.Button(main, text="Suchen", command = press_button_one)
+button_one = tk.Button(main, text="Linkbibliothek", command = press_button_one)
 button_one.place(x=20, y=25, width=80, height=30)
 
 
