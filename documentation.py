@@ -10,7 +10,7 @@ def window_four():
         mlabel2.pack()
         if mtext == "dinko":
             webbrowser.open_new('https://www.dropbox.com/s/3od07ml3tvvpo4c/The%20Art%20of%20SEO.pdf?dl=0')
-        elif mtext == "dinko": 
+        elif mtext == "mussa": 
             webbrowser.open_new('https://www.dropbox.com/s/3od07ml3tvvpo4c/The%20Art%20of%20SEO.pdf?dl=0')
         elif mtext == "stephan":
             webbrowser.open_new('https://www.dropbox.com/s/3od07ml3tvvpo4c/The%20Art%20of%20SEO.pdf?dl=0')
