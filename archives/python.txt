@@ -1,3 +1,0 @@
-1;Python;Was ist Python?;Es ist eine universelle, üblicherweise interpretierte höhere Programmiersprache.;Mehr über dein Thema?;https://de.wikipedia.org/wiki/Python_(Programmiersprache;https://www.python.org;https://www.youtube.com/watch?v=dG0kxa0XoXc
-
-
